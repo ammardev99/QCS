@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 Widget sizeBox(double w, [double? h]) {
   return SizedBox(
     width: w,
@@ -51,5 +50,20 @@ Widget infoTextCustom(String text, [Color? color]) {
       color: color ?? Colors.grey,
     ),
     textAlign: TextAlign.justify,
+  );
+}
+
+Widget underDevelopmentTag() {
+  return 
+  Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      sizeBox(20),
+      infoTextCustom("App is Under Development"),
+      sizeBox(10),
+      headingCustom("Develop By SoftSolvic", Colors.black38),
+      SelectableText('softsolvic@gmail.com'),
+      sizeBox(20),
+    ],
   );
 }
